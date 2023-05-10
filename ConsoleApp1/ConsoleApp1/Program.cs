@@ -13,7 +13,8 @@
 
             for (int i = 1; i <= 10; i++)
             {
-                Console.WriteLine($"Current queque: {myQueue.Dequeue()}");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($"Current queue: {myQueue.Dequeue()}");
                 Console.ReadKey();
                 Console.Clear();
             }
