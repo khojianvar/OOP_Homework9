@@ -18,10 +18,6 @@
                 Console.ReadKey();
                 Console.Clear();
             }
-
-
-
-
         }
     }
 }
