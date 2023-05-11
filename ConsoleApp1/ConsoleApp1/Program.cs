@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Diagnostics;
+using System.Net;
 
 namespace ConsoleApp1
 {
@@ -34,6 +35,9 @@ namespace ConsoleApp1
 
             Console.Write("Enter the ID of the student you want to search for: ");
             int getId = Convert.ToInt32(Console.ReadLine());
+            // Do Something...
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
 
             foreach (Student student in listStudents)
             {
@@ -42,9 +46,10 @@ namespace ConsoleApp1
                     Console.Clear();
                     Console.WriteLine($"Information about student: [Id]: {student.Id}, [Fullname]: {student.FullName}, [Phone Number]: {student.PhoneNumber}");
                 }
-
             }
-
+            stopwatch.Stop();
+            long elapsed_time = stopwatch.ElapsedMilliseconds;
+            Console.WriteLine($" {elapsed_time} ms");
         }
     }
     class Student 
